@@ -1,0 +1,38 @@
+p{
+  font-family: sans-serif;
+  font-size:30px;
+  margin:0px;
+  margin-left:0px;
+  padding-top:13px;
+  padding-bottom:13px;
+  font-size:30px;
+}
+
+.waku{
+  border:black solid 1px;
+  text-align:center;
+}
+
+.tango{
+  display:inline-block;
+  width:500px;
+  height:70px;
+  text-align:center;
+  background-color: #ffffff;
+  border: #336699 solid 10px;
+  margin:5px;
+}
+
+.mean{
+  display:inline-block;
+  width: 500px;
+  height: 70px;
+  text-align:center;
+  background-color: #ffffff;
+  border: #990000 solid 10px;
+  margin:5px;
+}
+
+.mae{
+  width: 100px;
+}
