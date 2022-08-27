@@ -1,18 +1,26 @@
 <html>
-<link rel="stylesheet" href="style.css" type="text/css" id="css">
-  <div class="waku">
-    <div class="tango">
-      <p>tango</p>
-    </div>
-    <br>
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css" id="css">
+  <script src="script.js"></script>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <div class="waku" onclick="new_tango_set()">
     
-    <div class="mean mae">
-      <p>前</p>
-    </div>
-    
-    <br>
-    <div class="mean">
-      <p>意味</p>
-    </div>
+      <table>
+        <tr>
+          <td class="tango" id="tango">Tap Anywhere</td>
+        </tr>
+        
+        <tr>
+          <td class="mean mae" id="mean_mae">To</td>
+        </tr>
+        
+        <tr>
+          <td class="mean" id="mean">Start</td>
+        </tr>
+      </table>
   </div>
+</body>
 </html>

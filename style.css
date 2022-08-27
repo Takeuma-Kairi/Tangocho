@@ -1,20 +1,30 @@
-p{
+table{
+  height:100%;
+  width:100%;
+}
+
+td{
   font-family: sans-serif;
-  font-size:30px;
+  font-size:50px;
   margin:0px;
   margin-left:0px;
   padding-top:13px;
   padding-bottom:13px;
   font-size:30px;
+  vertical-align: middle;
 }
 
 .waku{
   border:black solid 1px;
-  text-align:center;
+  height: 100%;
+}
+
+.hai{
+  display:table-cell;
+  vertical-align:middle;
 }
 
 .tango{
-  display:inline-block;
   width:500px;
   height:70px;
   text-align:center;
@@ -24,7 +34,6 @@ p{
 }
 
 .mean{
-  display:inline-block;
   width: 500px;
   height: 70px;
   text-align:center;
