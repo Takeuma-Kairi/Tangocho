@@ -1,3 +1,4 @@
+//単語の配列 [英単語, 前置詞／接続詞, 意味]
 var tangocho = [
 ["during" ,"(前) " ," ～の間"],
 ["while" ,"(接) " ," ～の間"],
@@ -67,47 +68,58 @@ var tangocho = [
 ["among" ,"(前) " ," ～中に、最中に"],
 ];
 
-var from_scratch = true;
-var page_shuffled = [];
-var page_num = -1;
+var from_scratch = true;  //単語帳シャッフルを行う？
+var page_shuffled = []; //シャッフルしたページ番号の配列
+var page_num = -1;  //ページ番号。開始時にインクリメントするので、最初は0から1引いて-1
 
+//======================================
+//ページ番号をシャッフルしてpage_shuffled配列にいれる
 function shuffle_tangocho(){
   for(var i=0; i<tangocho.length; i++){
-    page_shuffled[i] = i;
+    page_shuffled[i] = i;//まずはpage_shuffled配列に順番に番号をいれる
   }
   
+  //page_shuffled配列の要素をシャッフル
   for(var j=0; j<page_shuffled.length; j++){
     var random_page = Math.floor(Math.random() * page_shuffled.length);
     var temp = page_shuffled[j];
     page_shuffled[j] = page_shuffled[random_page];
     page_shuffled[random_page] = temp;
   }
-  page_num = -1;
+  
+  page_num = -1;//page_numをリセット
   from_scratch = false;
 }
 
+//======================================
+//メイン
 function new_tango_set(){
   var tango= document.getElementById("tango");
   var mean_mae= document.getElementById("mean_mae");
   var mean= document.getElementById("mean");
   
   
-  if(from_scratch){
+  if(from_scratch){ //最初からやるなら単語をシャッフルする
     shuffle_tangocho()
   }
   
-  if(mean.innerHTML != ""){
+  if(mean.innerHTML != ""){ //次の単語へ移る
     page_num++;
     if(page_num == tangocho.length){
       shuffle_tangocho();
       page_num = 0;
     }
     
+    //次の単語が表示され、 「前置詞／接続詞」、「意味」は空白に
     tango.innerHTML = tangocho[page_shuffled[page_num]][0];
     mean_mae.innerHTML = "";
     mean.innerHTML = "";
+    
+    // 前置詞／接続詞まで入っているなら、次の「意味」を表示
   }else if(mean_mae.innerHTML != ""){
     mean.innerHTML = tangocho[page_shuffled[page_num]][2];
+    
+    // 単語まで入っているなら、次の「前置詞／接続詞」を表示
   }else if(tango.innerHTML != ""){
     mean_mae.innerHTML = tangocho[page_shuffled[page_num]][1];
   }

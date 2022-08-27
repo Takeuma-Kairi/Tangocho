@@ -5,12 +5,9 @@ table{
 
 td{
   font-family: sans-serif;
-  font-size:50px;
+  font-size: 7vh;
   margin:0px;
   margin-left:0px;
-  padding-top:13px;
-  padding-bottom:13px;
-  font-size:30px;
   vertical-align: middle;
 }
 
@@ -19,14 +16,11 @@ td{
   height: 100%;
 }
 
-.hai{
-  display:table-cell;
-  vertical-align:middle;
-}
+
 
 .tango{
   width:500px;
-  height:70px;
+  height:20%;
   text-align:center;
   background-color: #ffffff;
   border: #336699 solid 10px;
@@ -35,13 +29,9 @@ td{
 
 .mean{
   width: 500px;
-  height: 70px;
+  height: 20%;
   text-align:center;
   background-color: #ffffff;
   border: #990000 solid 10px;
   margin:5px;
-}
-
-.mae{
-  width: 100px;
 }
